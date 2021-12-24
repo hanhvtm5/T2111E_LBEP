@@ -24,3 +24,4 @@ int main(){
 	printf("perimeter of triangle: %f\n",Perimeter(a,b,c));
 	printf("Acreage of triangle: %f\n",Acreage(a,b,c));
 }
+
