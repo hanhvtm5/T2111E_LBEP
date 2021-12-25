@@ -1,18 +1,19 @@
 #include <stdio.h>
 #include <conio.h>
+
 using namespace std;
 void nhapmang(int a[], int &n){
-  printf("nhap so phan tu :" );
+  printf("nhap so phan tu:" );
   scanf("%d",&n);
   for(int i=0; i<n; i++){ 
-    printf(" phan tu arr [%d] :",i);
+    printf(" phan tu arr [%d]:",i);
     scanf("%d",&a[i]);
     }
   
 }
 int xuatmang(int a[],int n){
     for(int i=0; i<n; i++){
-    	printf("%d \t",a[i]);
+    	printf("%d\t",a[i]);
     }
 }
  
@@ -23,7 +24,7 @@ void daonguoc(int a[],int n){
    a[n-1-i]=temp;
    }
   
- printf("\nmang nguoc lai la: ");
+ printf("\n mang nguoc lai la: ");
  for(int i=0; i<n; i++){
     printf("%d",a[i]);
     } 
