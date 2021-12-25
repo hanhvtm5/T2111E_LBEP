@@ -1,26 +1,46 @@
 #include <stdio.h>
+#include <conio.h>
+using namespace std;
+void nhapmang(int a[], int &n)
 
-void reverseArray(int arr[],int x){
-	printf("Mang dao nguoc la: ");
-	for(int i=0; i<x; i++){
-		int t=arr[i];
-		arr[i]=arr[x-1-i];
-		arr[x-1-i]=t;
-	}
-	for(int i=0;i<x;i++)
+{ printf("nhap so phan tu :" );
+  scanf("%d",&n);
+  for(int i=0;i<n;i++)
+  { printf(" phan tu arr [%d] :",i);
+    scanf("%d",&a[i]);
+  }
+  
+}
+int xuatmang(int a[],int n)
+ {
+  for(int i=0;i<n;i++)
      {
-        printf("%d  ",arr[i]);
+        printf("%d \t",a[i]);
+     }
+ }
+ 
+void daonguoc(int a[],int n)
+{
+ for(int i=0;i<=n/2;i++)
+  {
+   int temp=a[i];
+   a[i]=a[n-1-i];
+   a[n-1-i]=temp;
+  }
+  
+ printf("\nmang nguoc lai la: ");
+ for(int i=0;i<n;i++)
+     {
+        printf("%d ",a[i]);
      } 
 }
-int main(){
-	int n;
-	printf("Nhap kich thuoc mang = ");
-	scanf("%d",&n);
-	int arr[n];
-	printf("Nhap gia tri mang:\n");
-    for(int i=0; i<n; i++){
-        printf("arr[%d]:",i);
-        scanf("%d",&arr[i]);
-    }
-    reverseArray(arr,n);
+
+int main()
+{
+ int a[50],n;
+ nhapmang(a,n);
+ xuatmang(a,n);
+ daonguoc(a,n);
+ return 0;
 }
+
